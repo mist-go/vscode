@@ -1,0 +1,25 @@
+{
+  "name": "mist-syntax",
+  "displayName": "Mist Syntax",
+  "description": "Mist Syntax Highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.115.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mist",
+      "aliases": ["Mist", "mist"],
+      "extensions": [".ms"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mist",
+      "scopeName": "source.ms",
+      "path": "./syntaxes/mist.tmLanguage.json"
+    }]
+  }
+}
