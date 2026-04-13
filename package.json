@@ -18,7 +18,7 @@
     }],
     "grammars": [{
       "language": "mist",
-      "scopeName": "source.ms",
+      "scopeName": "source.mist",
       "path": "./syntaxes/mist.tmLanguage.json"
     }]
   }

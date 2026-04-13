@@ -1,32 +1,87 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Mist",
+	"scopeName": "source.mist",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+	  { "include": "#comments" },
+	  { "include": "#keywords" },
+	  { "include": "#strings" },
+	  { "include": "#numbers" },
+	  { "include": "#types" },
+	  { "include": "#operators" }
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mist",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.mist",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.mist",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.ms"
-}
+	  "comments": {
+		"patterns": [
+		  {
+			"name": "comment.line.double-slash.mist",
+			"match": "//.*$"
+		  }
+		]
+	  },
+  
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.flow.mist",
+			"match": "\\b(if|else|for|return|function|class|struct|import|let|const)\\b"
+		  },
+		  {
+			"name": "constant.language.null.mist",
+			"match": "\\b(null)\\b"
+		  },
+		  {
+			"name": "constant.language.this.mist",
+			"match": "\\b(this)\\b"
+		  },
+		  {
+			"name": "constant.language.boolean.mist",
+			"match": "\\b(true|false)\\b"
+		  }
+		]
+	  },
+  
+	  "strings": {
+		"name": "string.quoted.double.mist",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.mist",
+			"match": "\\\\."
+		  }
+		]
+	  },
+  
+	  "numbers": {
+		"patterns": [
+		  {
+			"name": "constant.numeric.float.mist",
+			"match": "\\b\\d+\\.\\d+\\b"
+		  },
+		  {
+			"name": "constant.numeric.integer.mist",
+			"match": "\\b\\d+\\b"
+		  }
+		]
+	  },
+  
+	  "types": {
+		"patterns": [
+		  {
+			"name": "entity.name.type.mist",
+			"match": "\\b[A-Z][a-zA-Z0-9_]*\\b"
+		  }
+		]
+	  },
+  
+	  "operators": {
+		"patterns": [
+		  {
+			"name": "keyword.operator.mist",
+			"match": "(==|!=|<=|>=|&&|\\|\\||[+\\-*/<>=])"
+		  }
+		]
+	  }
+	}
+  }
