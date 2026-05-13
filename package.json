@@ -3,6 +3,10 @@
   "displayName": "Mist Syntax",
   "description": "Mist Syntax Highlighting",
   "version": "0.0.1",
+  "author": {
+    "name": "Mist Team"
+  },
+  "publisher": "selimaj-dev",
   "icon": "icon.png",
   "homepage": "https://mist.selimaj.dev/",
   "repository": {
