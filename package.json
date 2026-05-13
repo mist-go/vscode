@@ -3,7 +3,12 @@
   "displayName": "Mist Syntax",
   "description": "Mist Syntax Highlighting",
   "version": "0.0.1",
-  "icon": "./icon.png",
+  "icon": "icon.png",
+  "homepage": "https://mist.selimaj.dev/",
+  "repository": {
+    "url": "https://github.com/mist-go/vscode",
+    "type": "git"
+  },
   "engines": {
     "vscode": "^1.115.0"
   },
