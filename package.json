@@ -13,7 +13,7 @@
     "languages": [{
       "id": "mist",
       "aliases": ["Mist", "mist"],
-      "extensions": [".ms"],
+      "extensions": [".mist"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
