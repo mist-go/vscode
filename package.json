@@ -10,16 +10,29 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "mist",
-      "aliases": ["Mist", "mist"],
-      "extensions": [".mist"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "mist",
-      "scopeName": "source.mist",
-      "path": "./syntaxes/mist.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "mist",
+        "aliases": [
+          "Mist",
+          "mist"
+        ],
+        "extensions": [
+          ".mist"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "icon.svg",
+          "dark": "icon.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mist",
+        "scopeName": "source.mist",
+        "path": "./syntaxes/mist.tmLanguage.json"
+      }
+    ]
   }
 }
