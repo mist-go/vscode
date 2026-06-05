@@ -127,9 +127,10 @@
     "generics": {
       "patterns": [
         {
-          "begin": "<",
+          "begin": "(?<=[a-zA-Z0-9_>])<(?![=<>])",
           "beginCaptures": { "0": { "name": "punctuation.brackets.angle.mist" } },
-          "end": ">",
+          "end": "(?<!=)>",
+          "endCaptures": { "0": { "name": "punctuation.brackets.angle.mist" } },
           "endCaptures": { "0": { "name": "punctuation.brackets.angle.mist" } },
           "patterns": [
             { "include": "#comments" },
