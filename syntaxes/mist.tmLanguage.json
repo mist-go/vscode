@@ -131,7 +131,6 @@
           "beginCaptures": { "0": { "name": "punctuation.brackets.angle.mist" } },
           "end": "(?<!=)>",
           "endCaptures": { "0": { "name": "punctuation.brackets.angle.mist" } },
-          "endCaptures": { "0": { "name": "punctuation.brackets.angle.mist" } },
           "patterns": [
             { "include": "#comments" },
             { "include": "#strings" },
