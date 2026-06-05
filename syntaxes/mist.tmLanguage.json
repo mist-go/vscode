@@ -22,7 +22,8 @@
     { "include": "#return_arrow" },
     { "include": "#functions" },
     { "include": "#operators" },
-    { "include": "#punctuation" }
+    { "include": "#punctuation" },
+    { "include": "#variables" }
   ],
   "repository": {
     "comments": {
@@ -231,6 +232,10 @@
     "punctuation": {
       "match": "::|:|;|,|\\.|\\{|\\}|\\(|\\)|\\[|\\]|\\?",
       "name": "punctuation.mist"
+    },
+    "variables": {
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+      "name": "variable.other.mist"
     }
   }
 }
