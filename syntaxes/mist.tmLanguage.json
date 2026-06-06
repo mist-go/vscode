@@ -108,9 +108,8 @@
     "keywords": {
       "patterns": [
         { "match": "\\b(if|else|while|for|return|break|continue|match|loop)\\b", "name": "keyword.control.mist" },
-        { "match": "\\b(struct|enum|class|trait|fn|let|impl)\\b", "name": "storage.type.mist" },
-        { "match": "\\b(pub|mut)\\b", "name": "storage.modifier.mist" },
-        { "match": "\\b(use|mod|as|dyn|unsafe|self|constructor)\\b", "name": "keyword.other.mist" },
+        { "match": "\\b(struct|enum|class|trait|fn|let|impl|class)\\b", "name": "storage.modifier.mist" },
+        { "match": "\\b(pub|mut|use|mod|as|dyn|unsafe|self|constructor)\\b", "name": "keyword.other.mist" },
         { "match": "\\b(true|false)\\b", "name": "constant.language.boolean.mist" }
       ]
     },
