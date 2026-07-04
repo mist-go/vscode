@@ -238,7 +238,7 @@
           "name": "keyword.control.mist"
         },
         {
-          "match": "\\b(struct|enum|class|trait|fn|let|impl|type|const)\\b",
+          "match": "\\b(struct|enum|class|trait|fn|let|impl|type|const|static)\\b",
           "name": "storage.modifier.mist"
         },
         {
