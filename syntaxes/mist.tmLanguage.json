@@ -4,6 +4,9 @@
   "scopeName": "source.mist",
   "patterns": [
     {
+      "include": "#include"
+    },
+    {
       "include": "#comments"
     },
     {
@@ -74,6 +77,60 @@
     }
   ],
   "repository": {
+    "include": {
+      "patterns": [
+        {
+          "begin": "(#)\\s*(include)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.directive.include.mist"
+            },
+            "2": {
+              "name": "keyword.control.directive.include.mist"
+            }
+          },
+          "end": "$",
+          "name": "meta.preprocessor.include.mist",
+          "patterns": [
+            {
+              "match": "\"[^\"]*\"",
+              "name": "string.quoted.double.include.mist"
+            },
+            {
+              "match": "<[^>]*>",
+              "name": "string.quoted.other.lt-gt.include.mist"
+            }
+          ]
+        },
+        {
+          "begin": "(#)\\s*(use)\\b",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.directive.include.mist"
+            },
+            "2": {
+              "name": "keyword.control.directive.include.mist"
+            }
+          },
+          "end": ";",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.terminator.statement.mist"
+            }
+          },
+          "name": "meta.preprocessor.include.mist",
+          "patterns": [
+            {
+              "include": "#types"
+            },
+            {
+              "match": "::",
+              "name": "punctuation.separator.namespace.mist"
+            }
+          ]
+        }
+      ]
+    },
     "comments": {
       "name": "comment.line.double-slash.mist",
       "match": "//.*"
