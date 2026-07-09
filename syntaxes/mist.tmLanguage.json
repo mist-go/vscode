@@ -284,20 +284,24 @@
     "keywords": {
       "patterns": [
         {
+          "match": "\\b(true|false)\\b",
+          "name": "constant.language.boolean.mist"
+        },
+        {
           "match": "\\b(if|else|while|for|return|break|continue|match|loop|in)\\b",
           "name": "keyword.control.mist"
         },
         {
-          "match": "\\b(struct|enum|class|trait|fn|let|impl|type|const|static)\\b",
+          "match": "\\b(struct|enum|class|trait|type)\\b",
+          "name": "storage.type.mist"
+        },
+        {
+          "match": "\\b(let|const|static|impl|virtual)\\b",
           "name": "storage.modifier.mist"
         },
         {
           "match": "\\b(pub|mut|use|module|as|dyn|unsafe|self|super|Super|constructor|override)\\b",
           "name": "keyword.other.mist"
-        },
-        {
-          "match": "\\b(true|false)\\b",
-          "name": "constant.language.boolean.mist"
         }
       ]
     },
