@@ -304,12 +304,12 @@
           "name": "keyword.control.flow.mist"
         },
         {
-          "match": "\\b(fn)\\b",
-          "name": "storage.type.function.mist"
-        },
-        {
           "match": "\\b(struct|enum|class|trait|type)\\b",
           "name": "storage.type.mist"
+        },
+        {
+          "match": "\\b(self|super|crate|Super)\\b",
+          "name": "variable.language.mist"
         },
         {
           "match": "\\b(let|const|static)\\b",
@@ -340,12 +340,12 @@
           "name": "keyword.operator.alias.mist"
         },
         {
-          "match": "\\b(self|super|crate|Super)\\b",
-          "name": "variable.language.mist"
-        },
-        {
           "match": "\\b(dyn)\\b",
           "name": "storage.modifier.dynamic.mist"
+        },
+        {
+          "match": "\\b(fn)\\b",
+          "name": "storage.modifier.function.mist"
         },
         {
           "match": "\\b(unsafe)\\b",
