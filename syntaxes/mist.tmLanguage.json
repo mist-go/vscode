@@ -177,83 +177,8 @@
       ]
     },
     "macros": {
-      "patterns": [
-        {
-          "begin": "\\b([a-zA-Z_][a-zA-Z0-9_]*)(!)(\\()",
-          "beginCaptures": {
-            "1": {
-              "name": "entity.name.function.macro.mist"
-            },
-            "2": {
-              "name": "keyword.operator.macro.mist"
-            },
-            "3": {
-              "name": "punctuation.parenthesis.begin.mist"
-            }
-          },
-          "end": "\\)",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.parenthesis.end.mist"
-            }
-          },
-          "patterns": [
-            {
-              "include": "$self"
-            }
-          ]
-        },
-        {
-          "begin": "\\b([a-zA-Z_][a-zA-Z0-9_]*)(!)(\\[)",
-          "beginCaptures": {
-            "1": {
-              "name": "entity.name.function.macro.mist"
-            },
-            "2": {
-              "name": "keyword.operator.macro.mist"
-            },
-            "3": {
-              "name": "punctuation.bracket.begin.mist"
-            }
-          },
-          "end": "\\]",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.bracket.end.mist"
-            }
-          },
-          "patterns": [
-            {
-              "include": "$self"
-            }
-          ]
-        },
-        {
-          "begin": "\\b([a-zA-Z_][a-zA-Z0-9_]*)(!)(\\{)",
-          "beginCaptures": {
-            "1": {
-              "name": "entity.name.function.macro.mist"
-            },
-            "2": {
-              "name": "keyword.operator.macro.mist"
-            },
-            "3": {
-              "name": "punctuation.curly.brace.begin.mist"
-            }
-          },
-          "end": "\\}",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.curly.brace.end.mist"
-            }
-          },
-          "patterns": [
-            {
-              "include": "$self"
-            }
-          ]
-        }
-      ]
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*!)",
+      "name": "entity.name.function.macro.mist"
     },
     "type_declarations": {
       "patterns": [
