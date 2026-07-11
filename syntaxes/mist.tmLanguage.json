@@ -272,7 +272,11 @@
           "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s+([a-zA-Z_][a-zA-Z0-9_]*)(?=\\s*(?:<[^;(){}]*>)?\\s*\\()",
           "captures": {
             "1": {
-              "name": "entity.name.type.mist"
+              "patterns": [
+                {
+                  "include": "#types"
+                }
+              ]
             },
             "2": {
               "name": "entity.name.function.mist"
@@ -288,20 +292,68 @@
           "name": "constant.language.boolean.mist"
         },
         {
-          "match": "\\b(if|else|while|for|return|break|continue|match|loop|in)\\b",
-          "name": "keyword.control.mist"
+          "match": "\\b(if|else|match)\\b",
+          "name": "keyword.control.conditional.mist"
+        },
+        {
+          "match": "\\b(for|while|loop|in)\\b",
+          "name": "keyword.control.loop.mist"
+        },
+        {
+          "match": "\\b(return|break|continue)\\b",
+          "name": "keyword.control.flow.mist"
+        },
+        {
+          "match": "\\b(fn)\\b",
+          "name": "storage.type.function.mist"
         },
         {
           "match": "\\b(struct|enum|class|trait|type)\\b",
           "name": "storage.type.mist"
         },
         {
-          "match": "\\b(let|const|static|impl|virtual)\\b",
+          "match": "\\b(let|const|static)\\b",
           "name": "storage.modifier.mist"
         },
         {
-          "match": "\\b(pub|mut|use|module|as|dyn|unsafe|self|super|Super|constructor|override)\\b",
-          "name": "keyword.other.mist"
+          "match": "\\b(pub|mut)\\b",
+          "name": "storage.modifier.visibility.mist"
+        },
+        {
+          "match": "\\b(virtual|override)\\b",
+          "name": "storage.modifier.virtual.mist"
+        },
+        {
+          "match": "\\b(impl)\\b",
+          "name": "keyword.declaration.implementation.mist"
+        },
+        {
+          "match": "\\b(use)\\b",
+          "name": "keyword.control.use.mist"
+        },
+        {
+          "match": "\\b(module)\\b",
+          "name": "keyword.control.module.mist"
+        },
+        {
+          "match": "\\b(as)\\b",
+          "name": "keyword.operator.alias.mist"
+        },
+        {
+          "match": "\\b(self|super|crate|Super)\\b",
+          "name": "variable.language.mist"
+        },
+        {
+          "match": "\\b(dyn)\\b",
+          "name": "storage.modifier.dynamic.mist"
+        },
+        {
+          "match": "\\b(unsafe)\\b",
+          "name": "keyword.control.unsafe.mist"
+        },
+        {
+          "match": "\\b(constructor)\\b",
+          "name": "entity.name.function.constructor.mist"
         }
       ]
     },
